@@ -1,4 +1,5 @@
 import Foundation
+import Color
 
 /// A 2D grid of pixels, each with an optional color.
 ///
@@ -68,5 +69,38 @@ public struct PixelGrid: Codable, Sendable {
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         return try encoder.encode(self)
+    }
+
+    // MARK: - Color Integration
+
+    /// Set pixel color at coordinates using Color type.
+    ///
+    /// - Parameters:
+    ///   - x: X coordinate (0 = left).
+    ///   - y: Y coordinate (0 = top).
+    ///   - color: Color to set, or nil for transparent.
+    public mutating func setPixel(x: Int, y: Int, color: Color?) {
+        self[x, y] = color?.hex
+    }
+
+    /// Get pixel color at coordinates as Color type.
+    ///
+    /// - Parameters:
+    ///   - x: X coordinate (0 = left).
+    ///   - y: Y coordinate (0 = top).
+    /// - Returns: Color or nil if transparent/out of bounds.
+    public func color(at x: Int, y: Int) -> Color? {
+        guard let hex = self[x, y] else { return nil }
+        return Color(hex: hex)
+    }
+
+    /// All non-transparent pixels with Color objects.
+    ///
+    /// Returns pixels in row-major order (top to bottom, left to right).
+    public var coloredPixels: [(x: Int, y: Int, color: Color)] {
+        filledPixels.compactMap { pixel in
+            guard let color = Color(hex: pixel.color) else { return nil }
+            return (pixel.x, pixel.y, color)
+        }
     }
 }

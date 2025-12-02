@@ -1,0 +1,15 @@
+{
+  "originHash" : "659c42da576a0532f4960e60204d5e736c624efc9660cadf670d86d009c89331",
+  "pins" : [
+    {
+      "identity" : "swift-color",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CorvidLabs/swift-color.git",
+      "state" : {
+        "revision" : "887c1cc6a85b3d416c092646ac21b904c2ef2972",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -1,4 +1,5 @@
 import Foundation
+import Color
 
 /// Configuration for SVG rendering.
 public struct SVGConfig: Sendable {
@@ -25,6 +26,22 @@ public struct SVGConfig: Sendable {
         self.canvasWidth = canvasWidth
         self.canvasHeight = canvasHeight
         self.backgroundColor = backgroundColor
+    }
+
+    /// Creates an SVG configuration with Color type for background.
+    ///
+    /// - Parameters:
+    ///   - canvasWidth: Output width in pixels (default: 256).
+    ///   - canvasHeight: Output height in pixels (default: 256).
+    ///   - backgroundColor: Background Color or nil for transparent.
+    public init(
+        canvasWidth: Int = 256,
+        canvasHeight: Int = 256,
+        backgroundColor: Color?
+    ) {
+        self.canvasWidth = canvasWidth
+        self.canvasHeight = canvasHeight
+        self.backgroundColor = backgroundColor?.hex
     }
 
     /// Default configuration (256x256, transparent).

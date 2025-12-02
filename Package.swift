@@ -9,8 +9,16 @@ let package = Package(
         .library(name: "ASCIIPixelArt", targets: ["ASCIIPixelArt"]),
         .executable(name: "ascii-pixel-cli", targets: ["ascii-pixel-cli"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/CorvidLabs/swift-color.git", from: "0.1.0"),
+    ],
     targets: [
-        .target(name: "ASCIIPixelArt"),
+        .target(
+            name: "ASCIIPixelArt",
+            dependencies: [
+                .product(name: "Color", package: "swift-color"),
+            ]
+        ),
         .executableTarget(
             name: "ascii-pixel-cli",
             dependencies: ["ASCIIPixelArt"]
