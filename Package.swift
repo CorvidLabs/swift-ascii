@@ -10,25 +10,14 @@ let package = Package(
         .executable(name: "ascii-pixel-cli", targets: ["ascii-pixel-cli"]),
     ],
     targets: [
-        .target(
-            name: "ASCIIPixelArt",
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
-        ),
+        .target(name: "ASCIIPixelArt"),
         .executableTarget(
             name: "ascii-pixel-cli",
-            dependencies: ["ASCIIPixelArt"],
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
+            dependencies: ["ASCIIPixelArt"]
         ),
         .testTarget(
             name: "ASCIIPixelArtTests",
-            dependencies: ["ASCIIPixelArt"],
-            swiftSettings: [
-                .enableUpcomingFeature("StrictConcurrency")
-            ]
+            dependencies: ["ASCIIPixelArt"]
         ),
     ]
 )
