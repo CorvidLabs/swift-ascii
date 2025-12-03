@@ -1,6 +1,7 @@
 # SwiftASCII
 
-[![CI](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-ascii/ci.yml?label=CI&branch=main)](https://github.com/CorvidLabs/swift-ascii/actions/workflows/ci.yml)
+[![macOS](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-ascii/macOS.yml?label=macOS&branch=main)](https://github.com/CorvidLabs/swift-ascii/actions/workflows/macOS.yml)
+[![Ubuntu](https://img.shields.io/github/actions/workflow/status/CorvidLabs/swift-ascii/ubuntu.yml?label=Ubuntu&branch=main)](https://github.com/CorvidLabs/swift-ascii/actions/workflows/ubuntu.yml)
 [![License](https://img.shields.io/github/license/CorvidLabs/swift-ascii)](https://github.com/CorvidLabs/swift-ascii/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/release/CorvidLabs/swift-ascii)](https://github.com/CorvidLabs/swift-ascii/releases)
 
