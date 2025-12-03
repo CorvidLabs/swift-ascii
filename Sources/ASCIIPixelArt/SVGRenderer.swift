@@ -12,12 +12,14 @@ public struct SVGConfig: Sendable {
     /// Background color (nil = transparent).
     public let backgroundColor: String?
 
-    /// Creates an SVG configuration.
-    ///
-    /// - Parameters:
-    ///   - canvasWidth: Output width in pixels (default: 256).
-    ///   - canvasHeight: Output height in pixels (default: 256).
-    ///   - backgroundColor: Background hex color or nil for transparent.
+    /**
+     Creates an SVG configuration.
+
+     - Parameters:
+       - canvasWidth: Output width in pixels (default: 256).
+       - canvasHeight: Output height in pixels (default: 256).
+       - backgroundColor: Background hex color or nil for transparent.
+     */
     public init(
         canvasWidth: Int = 256,
         canvasHeight: Int = 256,
@@ -28,12 +30,14 @@ public struct SVGConfig: Sendable {
         self.backgroundColor = backgroundColor
     }
 
-    /// Creates an SVG configuration with Color type for background.
-    ///
-    /// - Parameters:
-    ///   - canvasWidth: Output width in pixels (default: 256).
-    ///   - canvasHeight: Output height in pixels (default: 256).
-    ///   - backgroundColor: Background Color or nil for transparent.
+    /**
+     Creates an SVG configuration with Color type for background.
+
+     - Parameters:
+       - canvasWidth: Output width in pixels (default: 256).
+       - canvasHeight: Output height in pixels (default: 256).
+       - backgroundColor: Background Color or nil for transparent.
+     */
     public init(
         canvasWidth: Int = 256,
         canvasHeight: Int = 256,
@@ -48,18 +52,22 @@ public struct SVGConfig: Sendable {
     public static let `default` = SVGConfig()
 }
 
-/// Renders a PixelGrid to SVG.
-///
-/// Converts grid pixels to SVG rectangles, scaling to fit the canvas size.
+/**
+ Renders a PixelGrid to SVG.
+
+ Converts grid pixels to SVG rectangles, scaling to fit the canvas size.
+ */
 public enum SVGRenderer {
-    /// Render grid to SVG string.
-    ///
-    /// Each pixel becomes an SVG rectangle, scaled to fill the canvas.
-    ///
-    /// - Parameters:
-    ///   - grid: The pixel grid to render.
-    ///   - config: Rendering configuration.
-    /// - Returns: Complete SVG document string.
+    /**
+     Render grid to SVG string.
+
+     Each pixel becomes an SVG rectangle, scaled to fill the canvas.
+
+     - Parameters:
+       - grid: The pixel grid to render.
+       - config: Rendering configuration.
+     - Returns: Complete SVG document string.
+     */
     public static func render(grid: PixelGrid, config: SVGConfig = .default) -> String {
         let pixelWidth = Double(config.canvasWidth) / Double(grid.width)
         let pixelHeight = Double(config.canvasHeight) / Double(grid.height)
