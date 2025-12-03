@@ -11,7 +11,7 @@ A pure Swift package that converts ASCII art into pixel art SVG images.
 - **Layer-based composition** - Merge multiple ASCII files with different colors
 - **SVG output** - Scalable vector graphics, perfect for any size
 - **JSON export** - Raw pixel grid data for further processing
-- **Zero dependencies** - Pure Swift, no external libraries
+- **Built on [swift-color](https://github.com/CorvidLabs/swift-color)** - Native Color type integration
 
 ## Installation
 
@@ -19,7 +19,7 @@ Add to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/CorvidLabs/ascii-pixel-art", from: "0.1.0")
+    .package(url: "https://github.com/CorvidLabs/swift-ascii", from: "0.1.0")
 ]
 ```
 
@@ -63,6 +63,32 @@ let layers = try LayerMerger.loadLayers(from: [
 let grid = LayerMerger.merge(layers: layers, width: 16, height: 16)
 let svg = SVGRenderer.render(grid: grid)
 let json = try grid.toJSON()
+```
+
+### Color Integration
+
+```swift
+import ASCIIPixelArt
+import Color
+
+var grid = PixelGrid(width: 10, height: 10)
+
+// Set pixels using Color type
+grid.setPixel(x: 0, y: 0, color: .red)
+grid.setPixel(x: 1, y: 1, color: Color(hex: "#00FF00"))
+
+// Read pixels as Color
+if let color = grid.color(at: 0, y: 0) {
+    print(color.hex) // "#FF0000"
+}
+
+// Configure SVG with Color background
+let config = SVGConfig(
+    canvasWidth: 256,
+    canvasHeight: 256,
+    backgroundColor: .black
+)
+let svg = SVGRenderer.render(grid: grid, config: config)
 ```
 
 ## CLI Usage
