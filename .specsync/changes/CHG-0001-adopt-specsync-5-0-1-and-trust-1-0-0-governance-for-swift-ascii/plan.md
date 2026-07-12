@@ -5,5 +5,9 @@ artifact: plan
 
 # Plan
 
-1. Adopt SpecSync 5 with an explicit no-spec-change rationale.\n2. Install all four agent integrations.\n3. Add native SwiftPM verification and standard Trust policy.\n4. Add immutable Trust while retaining macOS, Ubuntu, and DocC workflows.\n5. Validate build, tests, integrations, and hosted checks.
+1. Adopt SpecSync 5 with an explicit no-spec-change rationale.
+2. Install all four agent integrations.
+3. Add native SwiftPM verification and standard Trust policy.
+4. Add immutable Trust while retaining macOS, Ubuntu, and DocC workflows.
+5. Validate build, tests, integrations, and hosted checks.
 
