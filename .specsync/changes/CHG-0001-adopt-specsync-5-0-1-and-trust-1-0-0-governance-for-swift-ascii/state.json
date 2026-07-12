@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-ascii",
+  "slug": "adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-swift-ascii",
+  "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASCII",
+  "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Swift ASCII",
+  "kind": "migration",
+  "state": "draft",
+  "base_commit": "ff938b962247726ed326dfab9aa8e5fd4eae0af4",
+  "created_at": 1783885421,
+  "updated_at": 1783885445,
+  "affected_specs": [],
+  "affected_paths": [
+    "Sources/",
+    "Tests/",
+    "Package.swift",
+    "Package.resolved",
+    "fledge.toml",
+    ".github/",
+    ".specsync/",
+    ".trust.toml",
+    ".augur.toml",
+    ".attest.json",
+    "AGENTS.md"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "This migration changes governance and CI orchestration only; Swift ASCII library and CLI public APIs, platform behavior, and DocC publication are unchanged, and no canonical spec currently exists.",
+  "acceptance_criteria": [
+    "SpecSync strict validation passes at advisory threshold 0; all four agents report installed; Trust doctor and native verification pass; Swift build and all 63 tests pass; macOS Ubuntu library CLI and DocC Pages workflows remain intact."
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "yes",
+    "public_contract": "no"
+  }
+}
