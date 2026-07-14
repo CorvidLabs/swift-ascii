@@ -7,7 +7,7 @@ artifact: testing
 
 - Run swift build and swift test.
 - Require all 63 tests across 12 suites to pass.
+- Require strict SpecSync at 100% file and LOC coverage and A/100 companion quality.
 - Preserve existing hosted macOS and Swift 6.0 Ubuntu builds and tests.
 - Run SpecSync strict validation, agent status, Trust doctor, and Trust verify.
 - Keep DocC publication independently triggered from main.
-

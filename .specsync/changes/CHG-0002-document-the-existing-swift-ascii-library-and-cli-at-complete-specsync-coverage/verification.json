@@ -1,0 +1,25 @@
+{
+  "timestamp": 1784003479,
+  "commit": "d712d1799718033a68104f5ac02537402e25a439",
+  "contract_digest": "062802c48e524f91e47afa2d3ffd79d631a57d68c2279f311645bb9f16edcfe5",
+  "workspace_digest": "c07408590d5e1be10e07c061defdc2b61f281b45821b2616bca1714910d4420a",
+  "acceptance_input_digest": "c7cf8880d33d19cb70c39a99c73ba17da88d24e664a12de4dc4378608a90b0c7",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": [
+    "REQ-ascii-pixel-art-001",
+    "REQ-ascii-pixel-art-002",
+    "REQ-ascii-pixel-art-003",
+    "REQ-ascii-pixel-art-004",
+    "REQ-ascii-pixel-art-005",
+    "REQ-ascii-pixel-art-006",
+    "REQ-ascii-pixel-art-007",
+    "REQ-ascii-pixel-art-008"
+  ]
+}

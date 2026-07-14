@@ -1,3 +1,18 @@
 {
-  "approvals": []
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784003373,
+      "digest": "014f8f747ea52c60cebf7aaba850d3ab51bcc7350e2e13fcda03c734d6aaf25e",
+      "note": "Definition approved after review of the governance-only migration, preserved workflows, complete companion plan, and portable native verification contract."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784003505,
+      "digest": "af7640deb19a418ba706d57e5dc4768360948fe4a86349a4e7a3370ff933c365",
+      "note": "Closing approval recorded after CHG-0002 applied the reviewed canonical delta, strict SpecSync remained at 100 percent and A/100, and the portable native gate built both products and passed all 63 tests."
+    }
+  ]
 }

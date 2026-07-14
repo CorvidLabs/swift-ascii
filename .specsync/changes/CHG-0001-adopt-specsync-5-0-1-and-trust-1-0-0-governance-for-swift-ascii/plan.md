@@ -5,9 +5,8 @@ artifact: plan
 
 # Plan
 
-1. Adopt SpecSync 5 with an explicit no-spec-change rationale.
+1. Adopt SpecSync 5 and pair the governance migration with CHG-0002's complete canonical companion.
 2. Install all four agent integrations.
 3. Add native SwiftPM verification and standard Trust policy.
 4. Add immutable Trust while retaining macOS, Ubuntu, and DocC workflows.
 5. Validate build, tests, integrations, and hosted checks.
-
