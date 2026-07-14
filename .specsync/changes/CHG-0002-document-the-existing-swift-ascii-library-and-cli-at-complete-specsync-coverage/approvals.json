@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1784003373,
+      "digest": "062802c48e524f91e47afa2d3ffd79d631a57d68c2279f311645bb9f16edcfe5",
+      "note": "Definition approved after reviewing the six source files, 650 source lines, 34 explicit public declaration lines, CLI contract, and all 63 deterministic tests."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1784003486,
+      "digest": "21b078ca204cbc8450eebe6fc643f47532ab544b66c2aed1f6e494630a3fe826",
+      "note": "Closing approval recorded only after strict SpecSync passed at 100 percent and A/100, the supported portable gate built both Swift products, and all 63 deterministic tests across 12 suites passed."
+    }
+  ]
+}
