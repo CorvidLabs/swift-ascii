@@ -39,8 +39,6 @@ Swift ASCII converts newline-delimited character art into a sparse colored pixel
 | `color` | Converts a stored valid hex string to `Color`, otherwise returns nil. |
 | `coloredPixels` | Returns only stored strings that successfully convert to `Color`. |
 | `Layer` | Sendable coordinate, color, and z-index value. |
-| `pixels` | Coordinates painted by a layer. |
-| `color` | Hex string stored for every painted coordinate. |
 | `zIndex` | Painter-order key, defaulting to zero. |
 | `LayerMerger` | Namespace for ordered composition and file-backed layer loading. |
 | `merge` | Sorts low-to-high z-index and paints later layers over earlier layers. |
@@ -57,6 +55,13 @@ Swift ASCII converts newline-delimited character art into a sparse colored pixel
 | `SVGRenderer` | Namespace for rendering grids to complete SVG documents. |
 | `render` | Scales each cell to the canvas, emits background first, then row-major filled pixels. |
 | CLI executable | `ascii-pixel-cli` accepts output, canvas, optional grid/background settings and one or more `path:color[:z]` layers; it writes `.svg` and `.json`. |
+
+#### Layer Properties
+
+| Export | Contract |
+|--------|----------|
+| `pixels` | Coordinates painted by a layer. |
+| `color` | Hex string stored for every painted coordinate. |
 
 ## Invariants
 
